@@ -1,6 +1,9 @@
 # Ignore build results
 target
 
+# Ignore execution-output
+*.json
+
 # Ignore Eclipse artifacts
 .classpath
 .project
