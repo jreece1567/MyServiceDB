@@ -1,0 +1,6 @@
+[
+  "DealInstance.deleted_at",
+  "DealInstance.disabled_at",
+  "DealInstance.enabled_at",
+  "DealInstance.published_at"
+]

@@ -1,0 +1,8 @@
+[
+  "RetailerInstance._links.logo.href",
+  "RetailerInstance.email_address",
+  "RetailerInstance.lease_id",
+  "RetailerInstance.retailer_website",
+  "RetailerInstance.store_profile",
+  "RetailerInstance.value"
+]

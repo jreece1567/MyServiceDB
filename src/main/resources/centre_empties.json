@@ -1,0 +1,13 @@
+[
+  "CentreInstance._links.dining_image.href",
+  "CentreInstance._links.dining_image_medium.href",
+  "CentreInstance._links.dining_image_small.href",
+  "CentreInstance.map_id",
+  "CentreInstance.social_media.google_plus",
+  "CentreInstance.social_media.pinterest",
+  "CentreInstance.social_media.twitter",
+  "CentreListInstance._links.dining_image.href",
+  "CentreListInstance._links.dining_image_medium.href",
+  "CentreListInstance._links.dining_image_small.href",
+  "CentreListInstance.map_id"
+]

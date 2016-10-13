@@ -1,0 +1,11 @@
+[
+  "CentreInstance.deleted_at",
+  "CentreInstance.disabled_at",
+  "CentreInstance.geofences.area",
+  "CentreInstance.geofences.building",
+  "CentreInstance.geofences.parking",
+  "CentreListInstance.deleted_at",
+  "CentreListInstance.geofences.area",
+  "CentreListInstance.geofences.building",
+  "CentreListInstance.geofences.parking"
+]
