@@ -1,7 +1,0 @@
-[
-  "Service.deleted_at",
-  "Service.email",
-  "Service.phone_number",
-  "Service.sort_order",
-  "Service.url"
-]

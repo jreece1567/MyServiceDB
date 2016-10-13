@@ -1,8 +1,0 @@
-[
-  "DealInstance._links.image.href",
-  "DealInstance._links.retailer_logo.href",
-  "DealInstance.description",
-  "DealInstance.level_description",
-  "DealInstance.name",
-  "DealInstance.subtitle"
-]

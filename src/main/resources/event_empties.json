@@ -1,7 +1,0 @@
-[
-  "EventInstance._embedded._links.logo.href",
-  "EventInstance.external_buy_url",
-  "EventInstance.external_url",
-  "EventInstance.external_url_description",
-  "EventInstance.name"
-]
