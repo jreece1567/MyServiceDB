@@ -1020,8 +1020,8 @@ public class Main {
     private void instanceMainCreate(final String[] args) {
         usage();
         System.out.println("Parameters: " + Arrays.asList(args));
-        if (args.length > 2) {
-            int ix = 2;
+        if (args.length > 3) {
+            int ix = 3;
             while (ix < args.length) {
                 DB db;
                 if ((db = DB.forValue(args[ix])) != null) {
@@ -1043,8 +1043,8 @@ public class Main {
     private void instanceMainAudit(final String[] args) {
         usage();
         System.out.println("Parameters: " + Arrays.asList(args));
-        if (args.length > 2) {
-            int ix = 2;
+        if (args.length > 3) {
+            int ix = 3;
             while (ix < args.length) {
                 DB db;
                 if ((db = DB.forValue(args[ix])) != null) {
@@ -1091,9 +1091,9 @@ public class Main {
         } else {
 
             API_KEY = args[0]; // set the ApiKey
-            if (args.length > 1) {
+            if (args.length > 2) {
                 // set the DB file path
-                FILE_PATH = args[1];
+                FILE_PATH = args[2];
             }
 
             final Main main = new Main();
@@ -1112,7 +1112,7 @@ public class Main {
                             + args[1]
                             + "' - must be either 'create' or 'audit'.");
                     System.out
-                    .println("Note that the 'create' parameter will result in hundreds of API calls being made, and will take close to an hour to complete.");
+                            .println("Note that the 'create' parameter will result in hundreds of API calls being made, and will take close to an hour to complete.");
                 }
             }
         }
