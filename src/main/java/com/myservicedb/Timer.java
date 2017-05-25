@@ -7,7 +7,6 @@ import java.util.Date;
 
 /**
  * Utility timer
- * <p>
  *
  * <pre>
  * Timer t = new Timer().start();
@@ -16,8 +15,6 @@ import java.util.Date;
  * ...
  * System.out.println("Elapsed: "+t.stop().elapsed()+"ms");
  * </pre>
- *
- * </p>
  *
  * @author jreece
  *

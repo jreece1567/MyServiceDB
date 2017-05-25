@@ -983,10 +983,16 @@ public class Main {
 
     }
 
-    private void usage() {
+    private static void usage() {
         System.out
-                .println("Usage: java -jar MyServiceDB.jar <api_key> <output-file_path> [ all | "
-                        + DB.getValues().toString() + " ]");
+                .println("Usage: java -jar MyServiceDB.jar < api_key > < create | audit > < output-file_path > [ all | "
+                        + DB.getValues().toString()
+                        + " ]"
+                        + "\n"
+                        + "Example:\n"
+                        + "java -jar MyServiceDB.jar lkajdslkjdd create /Users/me/json_files all"
+                        + "\n\n"
+                        + "would create all service db's and store the JSON files in the /Users/me/json_files folder.");
     }
 
     private void countEntriesByCountry(final JsonObject db) {
@@ -1077,16 +1083,15 @@ public class Main {
 
     /**
      * @param args
+     *            command-line arguments
      */
     public static void main(final String[] args) {
         if (args.length < 1) {
+            System.out.println("Parameters: " + Arrays.asList(args));
+            Main.usage();
 
             System.out
-                    .println("Please provide an Api-key on the command-line.");
-            System.out
-                    .println("An api-key parameter is required. Optionally, an additional parameter may be supplied - 'create' to build the local DB from the remote APIs, 'audit' to load the DB from local files.");
-            System.out
-                    .println("Note that the 'create' parameter will result in hundreds of API calls being made, and will take close to an hour to complete.");
+                    .println("\nPlease provide an Api-key on the command-line.");
 
         } else {
 
@@ -1108,11 +1113,11 @@ public class Main {
                     // to the console
                     main.instanceMainAudit(args);
                 } else {
-                    System.out.println("Invalid command-line argument - '"
+                    System.out.println("Parameters: " + Arrays.asList(args));
+                    Main.usage();
+                    System.out.println("\nInvalid command-line argument - '"
                             + args[1]
                             + "' - must be either 'create' or 'audit'.");
-                    System.out
-                            .println("Note that the 'create' parameter will result in hundreds of API calls being made, and will take close to an hour to complete.");
                 }
             }
         }

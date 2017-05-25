@@ -29,7 +29,7 @@ public class FileUtils {
     /**
      * @param filename
      *            the name of the file to read
-     * @return the contents of the file, as a List<String> of lines
+     * @return the contents of the file, as a {@code List<String>} of lines
      */
     public static List<String> readFileAsList(final String filename) {
         final File f = new File(filename);
@@ -42,7 +42,7 @@ public class FileUtils {
     /**
      * @param file
      *            the File to read
-     * @return the contents of the file, as a List<String> of lines
+     * @return the contents of the file, as a {@code List<String>} of lines
      */
     public static List<String> readFileAsList(final File file) {
 
@@ -100,7 +100,7 @@ public class FileUtils {
     }
 
     /**
-     * @param url
+     * @param uri
      *            the URL of the file to read
      * @return the contents of the file, as a String
      */
@@ -148,7 +148,7 @@ public class FileUtils {
      * @param filename
      *            the name of the file to be written
      * @param lines
-     *            a List<String> to be written to the file
+     *            a {@code List<String>} to be written to the file
      */
     public static void writeFileFromList(final String filename,
             final List<String> lines) {
@@ -159,7 +159,7 @@ public class FileUtils {
      * @param file
      *            the File to be written
      * @param lines
-     *            a List<String> to be written to the file
+     *            a {@code List<String>} to be written to the file
      */
     public static void writeFileFromList(final File file,
             final List<String> lines) {
@@ -181,7 +181,7 @@ public class FileUtils {
     /**
      * @param filename
      *            the name of the file to be written
-     * @param lines
+     * @param string
      *            a String to be written to the file
      */
     public static void writeFileFromString(final String filename,
@@ -190,9 +190,9 @@ public class FileUtils {
     }
 
     /**
-     * @param filename
-     *            the name of the file to be written
-     * @param lines
+     * @param file
+     *            the file to be written
+     * @param string
      *            a String to be written to the file
      */
     public static void writeFileFromString(final File file, final String string) {
