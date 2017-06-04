@@ -7,14 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Enumeration of all supported DB-types.
+ * 
  * @author jreece
- *
  */
 public enum DB {
 
     ALL("all"), CENTRE("centre"), CENTRE_DIRECTORY("centre_directory"), COLLECTION(
             "collection"), DEAL("deal"), EVENT("event"), MOVIE("movie"), NOTICE(
-                    "notice"), RETAILER("retailer"), STORE("store");
+            "notice"), RETAILER("retailer"), STORE("store");
 
     private final String value;
 
@@ -42,6 +43,14 @@ public enum DB {
         return values;
     }
 
+    /**
+     * Convert a String value into the corresponding {@code DB} enumeration
+     * instance.
+     * 
+     * @param value
+     *            the value to be converted.
+     * @return a {@code DB} enum instance, or null.
+     */
     public static DB forValue(final String value) {
         for (final DB f : DB.values()) {
             if (value.equals(f.getValue())) {

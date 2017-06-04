@@ -18,8 +18,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * @author jreece
+ * Basic file utilities.
  *
+ * @author jreece
  */
 public class FileUtils {
 
@@ -41,7 +42,7 @@ public class FileUtils {
 
     /**
      * @param file
-     *            the File to read
+     *            the {@code File} to read
      * @return the contents of the file, as a {@code List<String>} of lines
      */
     public static List<String> readFileAsList(final File file) {
@@ -77,7 +78,7 @@ public class FileUtils {
 
     /**
      * @param file
-     *            the File to read
+     *            the {@code File} to read
      * @return the contents of the file, as a String
      */
     public static String readFileAsString(final File file) {
@@ -157,7 +158,7 @@ public class FileUtils {
 
     /**
      * @param file
-     *            the File to be written
+     *            the {@code File} to be written
      * @param lines
      *            a {@code List<String>} to be written to the file
      */
@@ -191,7 +192,7 @@ public class FileUtils {
 
     /**
      * @param file
-     *            the file to be written
+     *            the {@code File} to be written
      * @param string
      *            a String to be written to the file
      */

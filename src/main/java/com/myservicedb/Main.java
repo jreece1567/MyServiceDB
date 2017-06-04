@@ -206,7 +206,6 @@ public class Main {
         final JsonArray centres = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         CentreListResponse response = service.centre.getCentres(null, country,
@@ -233,6 +232,7 @@ public class Main {
     }
 
     private JsonObject getCentreDB() {
+
         final JsonObject centreDB = new JsonObject();
 
         centreDB.add("AU", centresByCountry("AU"));
@@ -244,6 +244,7 @@ public class Main {
     }
 
     private JsonArray servicesByCentre(final String centreId) {
+
         final JsonArray centreServices = new JsonArray();
 
         {
@@ -300,6 +301,7 @@ public class Main {
     }
 
     private JsonObject getCentreDirectoryDB(final JsonObject centreDB) {
+
         final JsonObject centreDirectoryDB = new JsonObject();
 
         final Iterator<Entry<String, JsonElement>> itCentre = centreDB
@@ -318,10 +320,10 @@ public class Main {
     }
 
     private JsonArray noticesByCentre(final String centreId) {
+
         final JsonArray centreNotices = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         NoticeListResponse response = service.centre.getNotices(centreId, null,
@@ -348,6 +350,7 @@ public class Main {
     }
 
     private JsonObject getCentreNoticesDB(final JsonObject centreDB) {
+
         final JsonObject centreNoticesDB = new JsonObject();
 
         final Iterator<Entry<String, JsonElement>> itCentre = centreDB
@@ -366,10 +369,10 @@ public class Main {
     }
 
     private JsonArray eventsByCentre(final String centreId) {
+
         final JsonArray centreEvents = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         EventsListResponse response = service.event.getEvents(null, centreId,
@@ -398,6 +401,7 @@ public class Main {
     }
 
     private JsonObject getCentreEventsDB(final JsonObject centreDB) {
+
         final JsonObject centreEventsDB = new JsonObject();
 
         final Iterator<Entry<String, JsonElement>> itCentre = centreDB
@@ -416,10 +420,10 @@ public class Main {
     }
 
     private JsonArray dealsByCentre(final String centreId) {
+
         final JsonArray centreDeals = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         DealsListResponse response = service.deal.getDeals(null, null, null,
@@ -448,6 +452,7 @@ public class Main {
     }
 
     private JsonObject getCentreDealsDB(final JsonObject centreDB) {
+
         final JsonObject centreDealsDB = new JsonObject();
 
         final Iterator<Entry<String, JsonElement>> itCentre = centreDB
@@ -466,10 +471,10 @@ public class Main {
     }
 
     private JsonArray curationsByCountry(final String country) {
+
         final JsonArray curations = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         CurationsListResponse response = service.collection.getCurations(null,
@@ -498,6 +503,7 @@ public class Main {
     }
 
     private JsonObject getCurationsDB() {
+
         final JsonObject curationsDB = new JsonObject();
 
         curationsDB.add("AU", curationsByCountry("au"));
@@ -509,10 +515,10 @@ public class Main {
     }
 
     private JsonArray retailersByCountry(final String country) {
+
         final JsonArray retailers = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         RetailersListResponse response = service.store.getRetailers(null, null,
@@ -541,6 +547,7 @@ public class Main {
     }
 
     private JsonObject getRetailersDB() {
+
         final JsonObject retailersDB = new JsonObject();
 
         retailersDB.add("AU", retailersByCountry("au"));
@@ -552,10 +559,10 @@ public class Main {
     }
 
     private JsonArray storesByCountry(final String country) {
+
         final JsonArray stores = new JsonArray();
         final List<String> statuses = Arrays.asList("live", "pending",
                 "preview");
-        ;
 
         int page = 1;
         StoresListResponse response = service.store.getStores(null, null,
@@ -584,6 +591,7 @@ public class Main {
     }
 
     private JsonObject getStoresDB() {
+
         final JsonObject storesDB = new JsonObject();
 
         storesDB.add("AU", storesByCountry("au"));
@@ -595,6 +603,7 @@ public class Main {
     }
 
     private JsonArray moviesByCentre(final String centreId) {
+
         final JsonArray centreMovies = new JsonArray();
 
         final Date startDate = new Date();
@@ -626,6 +635,7 @@ public class Main {
     }
 
     private JsonObject getCentreMoviesDB(final JsonObject centreDB) {
+
         final JsonObject centreMoviesDB = new JsonObject();
 
         final Iterator<Entry<String, JsonElement>> itCentre = centreDB
@@ -644,6 +654,7 @@ public class Main {
     }
 
     private JsonObject readDB(final DB db) {
+
         final String str = FileUtils.readFileAsString(getFilename(db));
         if (str != null) {
             return new JsonParser().parse(str).getAsJsonObject();
@@ -656,12 +667,12 @@ public class Main {
     private void readDBs(final DB db) {
 
         List<DB> dbs = new ArrayList<DB>();
-
         if (DB.ALL.equals(db)) {
             dbs = Arrays.asList(DB.values());
         } else {
             dbs.add(db);
         }
+
         for (final DB dbType : dbs) {
 
             switch (dbType) {
@@ -712,6 +723,7 @@ public class Main {
     }
 
     private void writeDB(final DB db, final JsonObject dbObj) {
+
         if (dbObj != null) {
             FileUtils.writeFileFromString(getFilename(db), gson.toJson(dbObj));
             FileUtils.writeFileFromString(getNullFilename(db),
@@ -724,12 +736,12 @@ public class Main {
     private void writeDBs(final DB db) {
 
         List<DB> dbs = new ArrayList<DB>();
-
         if (DB.ALL.equals(db)) {
             dbs = Arrays.asList(DB.values());
         } else {
             dbs.add(db);
         }
+
         for (final DB dbType : dbs) {
 
             switch (dbType) {
@@ -782,7 +794,6 @@ public class Main {
     private void createDBs(final DB db) {
 
         List<DB> dbs = new ArrayList<DB>();
-
         if (DB.ALL.equals(db)) {
             dbs = Arrays.asList(DB.values());
         } else {
@@ -886,6 +897,7 @@ public class Main {
     }
 
     private void getCollectionDetailsByCountry(final String country) {
+
         final JsonArray db = this.curationsDB.get(country).getAsJsonArray();
 
         for (int i = 0; i < db.size(); i++) {
@@ -910,6 +922,7 @@ public class Main {
     }
 
     private void getCentreDetailsByCountry(final String country) {
+
         final JsonArray db = this.centreDB.get(country).getAsJsonArray();
 
         for (int i = 0; i < db.size(); i++) {
@@ -996,6 +1009,7 @@ public class Main {
     }
 
     private void countEntriesByCountry(final JsonObject db) {
+
         final Iterator<Entry<String, JsonElement>> itCountries = db.entrySet()
                 .iterator();
         while (itCountries.hasNext()) {
@@ -1007,6 +1021,7 @@ public class Main {
     }
 
     private void countEntriesByCentre(final JsonObject db) {
+
         int totalItems = 0;
         final Iterator<Entry<String, JsonElement>> itCentres = db.entrySet()
                 .iterator();
@@ -1022,8 +1037,10 @@ public class Main {
 
     /**
      * @param args
+     *            command-line arguments
      */
     private void instanceMainCreate(final String[] args) {
+
         usage();
         System.out.println("Parameters: " + Arrays.asList(args));
         if (args.length > 3) {
@@ -1045,8 +1062,10 @@ public class Main {
 
     /**
      * @param args
+     *            command-line arguments
      */
     private void instanceMainAudit(final String[] args) {
+
         usage();
         System.out.println("Parameters: " + Arrays.asList(args));
         if (args.length > 3) {
@@ -1065,6 +1084,7 @@ public class Main {
         } else {
             readDBs(DB.ALL);
         }
+
         System.out.println("Retailers");
         countEntriesByCountry(retailersDB);
         System.out.println("Stores");
@@ -1086,6 +1106,7 @@ public class Main {
      *            command-line arguments
      */
     public static void main(final String[] args) {
+
         if (args.length < 1) {
             System.out.println("Parameters: " + Arrays.asList(args));
             Main.usage();

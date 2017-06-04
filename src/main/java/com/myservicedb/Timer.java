@@ -6,7 +6,7 @@ package com.myservicedb;
 import java.util.Date;
 
 /**
- * Utility timer
+ * Utility timer.
  *
  * <pre>
  * Timer t = new Timer().start();
@@ -33,16 +33,31 @@ public class Timer {
         stop = start;
     }
 
+    /**
+     * Start the timer.
+     *
+     * @return this {@code Timer} instance.
+     */
     public Timer start() {
         this.init();
         return this;
     }
 
+    /**
+     * Stop the timer.
+     *
+     * @return this {@code Timer} instance.
+     */
     public Timer stop() {
         stop = new Date().getTime();
         return this;
     }
 
+    /**
+     * Get the elapsed time recorded by this {@code Timer} instance.
+     *
+     * @return the elapsed time recorded by this {@code Timer}, in milliseconds.
+     */
     public Long elapsed() {
         return stop - start;
     }
